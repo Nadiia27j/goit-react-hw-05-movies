@@ -2,6 +2,16 @@ import { useEffect, useState } from 'react';
 import { useParams, useLocation, Outlet } from 'react-router-dom';
 import { getMovieDetails } from 'services/api';
 import { Suspense } from 'react';
+import { MovieInfo } from '../../components/MovieInfo/MovieInfo'
+import {
+  Container,
+  LinkButton,
+  AddInfo,
+  AddInfoTitle,
+  AddInfoItem,
+  AddInfoWrapper,
+  AddInfoItemLink,
+} from './MovieDetails.styled';
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState(null);

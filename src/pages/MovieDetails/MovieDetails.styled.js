@@ -1,29 +1,42 @@
-import { Movies } from "components/Movies/Movies";
-import { useEffect, useState } from "react";
-import { getTrendingMovies } from "services/api";
-import { Movies } from "components/Movies/Movies";
+import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
-const Home = () => {
-    const [trendingMovies, setTrendingMovies] = useState([]);
+export const Container = styled.section`
+  padding: 16px 28px;
+`;
 
-    useEffect(() => {
-        const renderTrendingMovies = async () => {
-            try {
-                const trendingMovies = await getTrendingMovies();
-                setTrendingMovies(trendingMovies);
-            } catch (error) {
-                console.log(error)
-            }
-        };
-        renderTrendingMovies();
-    },[]);
-   
-    return (
-        <Container>
-            <Title>Trending today</Title>
-            <Movies movies={trendingMovies} />
-        </Container>
-    )
-}
+export const LinkButton = styled(Link)`
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+  color: black;
+  :hover {
+    color: #c27ba0;
+  }
+`;
 
-export default Home;
+export const AddInfo = styled.div`
+  margin-top: 16px;
+`;
+
+export const AddInfoTitle = styled.p`
+  font-size: 16px;
+`;
+
+export const AddInfoItem = styled.li`
+  :not(:last-child) {
+    margin-bottom: 8px;
+  }
+`;
+
+export const AddInfoWrapper = styled.div`
+  padding: 16px;
+`;
+
+export const AddInfoItemLink = styled(Link)`
+  color: blue;
+  :hover {
+    color: #c27ba0;
+  }
+`;

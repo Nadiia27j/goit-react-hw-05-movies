@@ -5,9 +5,9 @@ import {
     MovieInfoTitle,
     MovieInfoSubTitle,
     MovieInfoDetails,
-  } from './MovieInfo.styled';
+} from './MovieInfo.styled';
 
-  
+
 export const MovieInfo = ({ info }) => {
   const {
     poster_path,

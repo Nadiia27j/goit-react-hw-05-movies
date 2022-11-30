@@ -15,6 +15,7 @@ export const MoviesInput = styled.input`
   font-size: 18px;
   outline: transparent;
   border: 1px solid #e1d3c1;
+  border-radius: 50px;
   :hover,
   :focus {
     border-color: #b4a89a;
@@ -24,10 +25,11 @@ export const Button = styled.button`
   width: 70px;
   height: 40px;
   font-size: 16px;
-  background-color: #faebd7;
+  background-color: gray;
   border: 1px solid #e1d3c1;
+  border-radius: 50px;
   :hover {
-    background-color: #c27ba0;
+    background-color: blueviolet;
     color: #ffffff;
   }
 `;

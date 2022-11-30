@@ -24,7 +24,7 @@ export const MovieInfo = ({ info }) => {
   const baseURL = 'https://image.tmdb.org/t/p/w200';
 
   const getYear = () => new Date(`${release_date}`).getFullYear();
-  const getScor = () => Math.round(`${vote_average}` * 10);
+  const getScore = () => Math.round(`${vote_average}` * 10);
 
   return (
     <MovieInfoContainer>
@@ -37,7 +37,7 @@ export const MovieInfo = ({ info }) => {
         <MovieInfoTitle>
           {original_title} ({getYear()})
         </MovieInfoTitle>
-        <MovieInfoDetails>User Score : {getScor()}%</MovieInfoDetails>
+        <MovieInfoDetails>User Score : {getScore()}%</MovieInfoDetails>
         <MovieInfoSubTitle>Overview </MovieInfoSubTitle>
         <MovieInfoDetails>{overview}</MovieInfoDetails>
         <MovieInfoSubTitle>Genres</MovieInfoSubTitle>

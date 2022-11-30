@@ -9,10 +9,13 @@ export const LinkButton = styled(Link)`
   text-decoration: none;
   color: black;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 15px;
   color: black;
+  border: 2px solid black;
+  border-radius: 50px;
+  padding: 5px 8px;
   :hover {
-    color: #c27ba0;
+    color: blueviolet;
   }
 `;
 
@@ -35,8 +38,8 @@ export const AddInfoWrapper = styled.div`
 `;
 
 export const AddInfoItemLink = styled(Link)`
-  color: blue;
+  color: red;
   :hover {
-    color: #c27ba0;
+    color: blueviolet;
   }
 `;

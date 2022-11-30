@@ -7,6 +7,8 @@ import {
     MovieInfoDetails,
 } from './MovieInfo.styled';
 
+import noImg from '../Image/no-img.jpg';
+
 
 export const MovieInfo = ({ info }) => {
   const {
@@ -17,12 +19,20 @@ export const MovieInfo = ({ info }) => {
     overview,
     genres,
   } = info;
+   console.log(info);
+
+  const baseURL = 'https://image.tmdb.org/t/p/w200';
 
   const getYear = () => new Date(`${release_date}`).getFullYear();
   const getScor = () => Math.round(`${vote_average}` * 10);
 
   return (
     <MovieInfoContainer>
+       <img
+        src={poster_path ? `${baseURL}${poster_path}` : noImg}
+        alt={original_title}
+        width="200"
+      />
       <MovieInfoWrapper>
         <MovieInfoTitle>
           {original_title} ({getYear()})

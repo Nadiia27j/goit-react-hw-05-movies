@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import { getMovieCast } from 'services/api';
 import { CastItem, CastInfo} from './Cast.styled';
+import noImg from '../Image/no-img.jpg';
 
 const Cast = () => {
  const [cast, setCast] = useState([]);
@@ -26,7 +27,7 @@ const Cast = () => {
         return (
           <CastItem key={id}>
              <img
-                src={profile_path ? `${baseURL}${profile_path}` : noImage}
+                src={profile_path ? `${baseURL}${profile_path}` : noImg}
                 alt=""
                 width="200"
               />
